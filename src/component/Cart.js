@@ -1,11 +1,12 @@
 import React from 'react'
 import MasterPage from './mainPage/MasterPage'
-const DashBoard = () => {
+
+const Cart = () => {
   return (
     <MasterPage>
-      <div>dashboard</div>
+      <div className='cart fw-bold '>carting page</div>
     </MasterPage>
   )
 }
 
-export default DashBoard
+export default Cart

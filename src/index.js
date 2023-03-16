@@ -3,49 +3,29 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
 
-import Dashboard from './component/Dashboard'
-
-import Login from './component/Login'
-import Setting from './component/Setting'
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Compose from './component/Compose'
-import ItemTwo from './component/ItemTwo'
-import ItemOne from './component/ItemOne'
-import ErrorPage from './component/ErrorPage'
+
+import ErrorPage from './Component/ErrorPage'
+import MailBox from './Component/MailBox'
+import DashBoard from './Component/DashBoard'
+import Cart from './Component/Cart'
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
   },
-
   {
     path: '/dashboard',
-    element: <Dashboard />,
-  },
-
-  {
-    path: '/orders/Items1',
-    element: <ItemOne />,
+    element: <DashBoard />,
   },
   {
-    path: '/order/Item2',
-    element: <ItemTwo />,
+    path: '/cart',
+    element: <Cart />,
   },
   {
-    path: '/accommodation/Compose',
-    element: <Compose />,
-    errorElement: <ErrorPage />,
-  },
-
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/setting',
-    element: <Setting />,
+    path: '/mailbox',
+    element: <MailBox />,
   },
 ])
 

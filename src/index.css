@@ -3,96 +3,55 @@
   --topnavHeight: 55px;
   --navwidth: 58px;
 }
-body {
-  background-color: white;
+.sidebar-nav {
+  width: var(--offcanvas-width);
+  top: var(--topnavHeight);
 }
-.home,
-.accomodation,
-.product {
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link.right-icon {
+  display: inline-flex;
+  transition: ease 0.25s;
+}
+.sidebar-link[aria-expanded='false'] .right-icon {
+  transform: rotate(180deg);
+}
+main {
+  margin-left: 200px;
+}
+.item,
+.cart {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 30vh;
-  width: 60vw;
+  width: 55vw;
   font-weight: bolder;
   font-size: 25px;
   font-family: lapt0, sans-serif;
 }
-.sidebar-nav {
-  width: var(--offcanvas-width);
-  top: var(--topnavHeight);
-  padding-left: calc(var(--navwidth)+1rem);
-}
 
-.images-logo {
-  width: 35px;
-  height: 35px;
-  object-fit: cover;
-  border-radius: 50%;
-  position: relative;
+.offcanvas-backdrop::before {
+  display: none;
 }
 @media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
   .offcanvas-backdrop::before {
     display: none;
   }
   .sidebar-nav {
-    visibility: visible !important;
     transform: none;
+    visibility: visible !important;
     top: var(--topnavHeight);
-    height: calc(100% -var(--topnavHeight));
+    width: var(--offcanvas-width);
+    top: var(--topnavHeight);
   }
-}
-
-.button {
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  border: none;
-  color: black;
-  background: none;
-  width: 80%;
-  text-align: left;
-}
-.dropdown-container {
-  display: grid;
-
-  padding-left: 5px;
-  margin-left: 4px;
-}
-h2 {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  font-family: sans-serif;
-  font-size: 20px;
-}
-input {
-  border: 1px solid;
-  border-radius: 1rem;
-}
-label {
-  margin-top: 20px;
-  font-size: small;
-}
-.signBtn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: beige;
-  background-color: blue;
-  margin-top: 10px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 5px;
-  border: 2px solid;
-  border-radius: 2rem;
+  .sidebar-link.right-icon {
+    display: inline-flex;
+    transition: ease 0.25s;
+  }
 }

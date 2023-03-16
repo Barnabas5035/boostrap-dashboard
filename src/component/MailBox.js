@@ -1,11 +1,11 @@
 import React from 'react'
 import MasterPage from './mainPage/MasterPage'
-const DashBoard = () => {
+const MailBox = () => {
   return (
     <MasterPage>
-      <div>dashboard</div>
+      <div className=' item fw-bold '>helllo</div>
     </MasterPage>
   )
 }
 
-export default DashBoard
+export default MailBox

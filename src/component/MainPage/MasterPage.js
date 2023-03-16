@@ -1,11 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Sidebar from '../Sidebar'
-
-const MasterPage = ({ children }) => {
+import SideBar from '../SideBar'
+const masterPage = ({ children }) => {
   return (
     <div>
-      <Sidebar />
+      <SideBar />
       <div>
         {children}
         <Outlet />
@@ -14,4 +13,4 @@ const MasterPage = ({ children }) => {
   )
 }
 
-export default MasterPage
+export default masterPage
