@@ -124,10 +124,10 @@ const SideBar = () => {
                 <Link
                   class='nav-link px-3 sidebar-link'
                   data-bs-toggle='collapse'
-                  to='#collapseExample'
+                  to='#multicollapseExample'
                   role='button'
                   aria-expanded='false'
-                  aria-controls='collapseExample'
+                  aria-controls='multicollapseExample'
                 >
                   <span className='me-2'>
                     <i class='bi bi-grid-3x3-gap-fill'></i>
@@ -137,7 +137,7 @@ const SideBar = () => {
                     <i class='bi bi-chevron-down'></i>
                   </span>
                 </Link>
-                <div class='collapse' id='collapseExample'>
+                <div class='multicollapse' id='multicollapseExample'>
                   <div>
                     <ul className='navbar-nav px-3 '>
                       <li>
@@ -179,7 +179,7 @@ const SideBar = () => {
                 >
                   <span className='me-2'>
                     <i class='bi bi-grid-3x3-gap-fill'></i>
-                    <span className='nav-items ms-2'>Layout</span>
+                    <span className='nav-items ms-2'>Reading</span>
                   </span>
                   <span class='right-icon ms-auto'>
                     <i class='bi bi-chevron-down'></i>
